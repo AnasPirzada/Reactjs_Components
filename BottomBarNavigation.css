@@ -1,0 +1,137 @@
+/* Variables */
+:root {
+  --white: #fff;
+  --purple: #5b37b7;
+  --pink: #c9379d;
+  --ocher: #e6a919;
+  --cyan: #1194aa;
+  --transition: 0.3s ease;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h3 {
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/* Wrapper */
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: transparent;
+  height: 100vh;
+  transition: var(--transition);
+}
+
+/* Background colors based on classes */
+#wrapper.purple {
+  background-color: var(--purple);
+}
+
+#wrapper.pink {
+  background-color: var(--pink);
+}
+
+#wrapper.ocher {
+  background-color: var(--ocher);
+}
+
+#wrapper.cyan {
+  background-color: var(--cyan);
+}
+
+/* Menu */
+.menu {
+  background: var(--white);
+  width: 600px;
+  padding: 80px 100px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu item styles */
+.menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+.menu-item:last-child {
+  margin-right: 0px;
+}
+
+/* Inactive menu item styles */
+.menu-item.inactive {
+  background-color: transparent !important;
+}
+
+.menu-item.inactive svg {
+  color: #000 !important;
+}
+
+.menu-item.inactive .menu-item__text {
+  min-width: 0px;
+  opacity: 0;
+  font-size: 0px;
+}
+
+/* Menu item colors based on classes */
+.menu-item.purple {
+  background-color: hsl(var(--purple), 40%);
+  color: var(--purple);
+}
+
+.menu-item.pink {
+  background-color: hsl(var(--pink), 40%);
+  color: var(--pink);
+}
+
+.menu-item.ocher {
+  background-color: hsl(var(--ocher), 40%);
+  color: var(--ocher);
+}
+
+.menu-item.cyan {
+  background-color: hsl(var(--cyan), 40%);
+  color: var(--cyan);
+}
+
+/* Menu item text */
+.menu-item__text {
+  min-width: 80px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  opacity: 1;
+  transition: opacity var(--transition);
+}
+
+/* Menu item icon */
+.menu-item__icon {
+  display: inline-block;
+  text-align: center;
+  font-size: 0px;
+}
+
+.menu-item__icon svg {
+  height: 30px;
+  width: 30px;
+}
